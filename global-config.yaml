@@ -15,7 +15,7 @@ controlTower:
     version: '4.0'
     logging:
       loggingBucketRetentionDays: 365
-      accessLoggingBucketRentionDays: 365
+      accessLoggingBucketRetentionDays: 365
       organizationTrail: true
     security:
       enableIdentityCenterAccess: true
