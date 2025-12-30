@@ -23,3 +23,5 @@ mandatoryAccounts:
     email: mqduong+3@amazon.com
     organizationalUnit: Security
     warm: false
+    
+workloadAccounts: []
