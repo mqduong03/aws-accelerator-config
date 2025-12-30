@@ -11,6 +11,8 @@ terminationProtection: true
 enableOptInRegions: false
 controlTower:
   enable: true
+  logging:
+    organizationalTrail: true
   controls: []
 logging:
   account: LogArchive
