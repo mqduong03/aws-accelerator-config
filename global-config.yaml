@@ -11,8 +11,10 @@ terminationProtection: true
 enableOptInRegions: false
 controlTower:
   enable: true
-  logging:
-    organizationTrail: true
+  landingZone:
+    version: '4.0'
+    logging:
+      organizationTrail: true
   controls: []
 logging:
   account: LogArchive
