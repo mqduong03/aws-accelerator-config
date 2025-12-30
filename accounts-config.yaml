@@ -23,8 +23,4 @@ mandatoryAccounts:
     email: mqduong+3@amazon.com
     organizationalUnit: Security
     warm: false
-workloadAccounts:
-  - name: test-mqduong
-    description: Test account
-    email: mqduong+test@amazon.com
-    organizationalUnit: Sandbox
+workloadAccounts:[] 
