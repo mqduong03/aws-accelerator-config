@@ -12,7 +12,7 @@ enableOptInRegions: false
 controlTower:
   enable: true
   logging:
-    organizationalTrail: true
+    organizationTrail: true
   controls: []
 logging:
   account: LogArchive
