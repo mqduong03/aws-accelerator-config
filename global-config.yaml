@@ -16,7 +16,7 @@ controlTower:
     logging:
       loggingBucketRetentionDays: 365
       accessLoggingBucketRetentionDays: 365
-      organizationTrail: true
+      organizationTrail: false
     security:
       enableIdentityCenterAccess: true
   controls: []
@@ -24,7 +24,7 @@ logging:
   account: LogArchive
   cloudtrail:
     enable: false
-    organizationTrail: false
+    organizationTrail: true
     organizationTrailSettings:
       multiRegionTrail: true
       globalServiceEvents: true
