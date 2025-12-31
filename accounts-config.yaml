@@ -12,7 +12,7 @@ mandatoryAccounts:
       The log archive account. Do not change the name field for this mandatory
       account. Note, the account name key does not need to match the AWS account
       name.
-    email: mqduong+2@amazon.com
+    email: mqduong+3@amazon.com
     organizationalUnit: Security
     warm: false
   - name: Audit
@@ -20,7 +20,7 @@ mandatoryAccounts:
       The security audit account (also referred to as the audit account). Do not
       change the name field for this mandatory account. Note, the account name
       key does not need to match the AWS account name.
-    email: mqduong+3@amazon.com
+    email: mqduong+2@amazon.com
     organizationalUnit: Security
     warm: false
     
