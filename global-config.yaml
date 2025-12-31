@@ -16,7 +16,7 @@ controlTower:
     logging:
       loggingBucketRetentionDays: 365
       accessLoggingBucketRetentionDays: 365
-      organizationTrail: false
+      organizationTrail: true
     security:
       enableIdentityCenterAccess: true
   controls: []
