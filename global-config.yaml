@@ -23,7 +23,7 @@ controlTower:
 logging:
   account: LogArchive
   cloudtrail:
-    enable: false
+    enable: true
     organizationTrail: true
     organizationTrailSettings:
       multiRegionTrail: true
