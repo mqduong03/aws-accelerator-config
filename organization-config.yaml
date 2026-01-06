@@ -2,6 +2,8 @@ enable: true
 organizationalUnits:
   - name: Security
   - name: Infrastructure
+  - name: Suspended
+    ignore: true
 serviceControlPolicies: []
 taggingPolicies: []
 chatbotPolicies: []
