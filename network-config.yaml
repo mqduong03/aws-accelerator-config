@@ -1,40 +1,56 @@
-vpcs:
-  # First VPC with endpoint
-  - name: Test-VPC-1
-    account: NetworkAccount
-    region: us-east-1
-    cidrs:
-      - 10.100.0.0/24
-    enableDnsHostnames: true
-    enableDnsSupport: true
-    internetGateway: false
-    subnets:
-      - name: Test-Subnet-1A
-        availabilityZone: a
-        ipv4CidrBlock: 10.100.0.0/26
-    interfaceEndpoints:
-      subnets:
-        - Test-Subnet-1A
-      endpoints:
-        - service: ssm
-          # private DNS enabled by default
+transitGateways: []
+endpointPolicies: []
+defaultVpc:
+  delete: false
+  excludeAccounts: []
 
-  # Second VPC with same endpoint - THIS WILL CAUSE CONFLICT
-  - name: Test-VPC-2
-    account: NetworkAccount
+vpcs:
+  - name: core-shared-endpoint
+    account: NetCore
     region: us-east-1
     cidrs:
-      - 10.101.0.0/24
+      - 10.251.0.0/24
     enableDnsHostnames: true
     enableDnsSupport: true
     internetGateway: false
+    instanceTenancy: default
     subnets:
-      - name: Test-Subnet-2A
+      - name: VPCe-subnet-1
         availabilityZone: a
-        ipv4CidrBlock: 10.101.0.0/26
+        ipv4CidrBlock: 10.251.0.0/26
+      - name: VPCe-subnet-2
+        availabilityZone: b
+        ipv4CidrBlock: 10.251.0.64/26
     interfaceEndpoints:
+      central: true
+      defaultPolicy: Default
       subnets:
-        - Test-Subnet-2A
+        - VPCe-subnet-1
+        - VPCe-subnet-2
       endpoints:
         - service: ssm
-          # private DNS enabled by default - CONFLICT!
+
+  - name: public-shared-endpoint
+    account: NetPublic
+    region: us-east-1
+    cidrs:
+      - 10.252.0.0/24
+    enableDnsHostnames: true
+    enableDnsSupport: true
+    internetGateway: false
+    instanceTenancy: default
+    subnets:
+      - name: VPCe-subnet-1
+        availabilityZone: a
+        ipv4CidrBlock: 10.252.0.0/26
+      - name: VPCe-subnet-2
+        availabilityZone: b
+        ipv4CidrBlock: 10.252.0.64/26
+    interfaceEndpoints:
+      central: false
+      defaultPolicy: Default
+      subnets:
+        - VPCe-subnet-1
+        - VPCe-subnet-2
+      endpoints:
+        - service: ssm
