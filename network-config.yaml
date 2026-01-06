@@ -22,6 +22,7 @@ vpcs:
         ipv4CidrBlock: 10.251.0.64/26
     interfaceEndpoints:
       central: true
+      defaultPolicy: Default
       subnets:
         - VPCe-subnet-1
         - VPCe-subnet-2
@@ -32,7 +33,7 @@ vpcs:
     account: Network
     region: us-east-1
     cidrs:
-      - 10.252.0.0/24
+      - [IP_ADDRESS]
     enableDnsHostnames: true
     enableDnsSupport: true
     internetGateway: false
@@ -45,6 +46,7 @@ vpcs:
         ipv4CidrBlock: 10.252.0.64/26
     interfaceEndpoints:
       central: false
+      defaultPolicy: Default
       subnets:
         - VPCe-subnet-1
         - VPCe-subnet-2
