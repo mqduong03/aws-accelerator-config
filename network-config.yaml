@@ -8,7 +8,7 @@ defaultVpc:
 
 vpcs:
   - name: core-shared-endpoint
-    account: Management
+    account: Network
     region: us-east-1
     cidrs:
       - 10.0.0.0/24
@@ -32,7 +32,7 @@ vpcs:
         - service: ec2
 
   - name: public-shared-endpoint
-    account: Management
+    account: Network
     region: us-east-1
     cidrs:
       - 10.1.0.0/24
