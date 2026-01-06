@@ -1,5 +1,3 @@
-transitGateways: []
-endpointPolicies: []
 defaultVpc:
   delete: false
   excludeAccounts: []
@@ -9,46 +7,46 @@ vpcs:
     account: Network
     region: us-east-1
     cidrs:
-      - 10.251.0.0/24
+      - 10.0.0.0/24
     enableDnsHostnames: true
     enableDnsSupport: true
     internetGateway: false
     subnets:
-      - name: VPCe-subnet-1
+      - name: subnet-1
         availabilityZone: a
-        ipv4CidrBlock: 10.251.0.0/26
-      - name: VPCe-subnet-2
+        ipv4CidrBlock: 10.0.0.0/26
+      - name: subnet-2
         availabilityZone: b
-        ipv4CidrBlock: 10.251.0.64/26
+        ipv4CidrBlock: 10.0.0.64/26
     interfaceEndpoints:
       central: true
       defaultPolicy: Default
       subnets:
-        - VPCe-subnet-1
-        - VPCe-subnet-2
+        - subnet-1
+        - subnet-2
       endpoints:
-        - service: ssm
+        - service: ec2
 
   - name: public-shared-endpoint
     account: Network
     region: us-east-1
     cidrs:
-      - [IP_ADDRESS]
+      - 10.1.0.0/24
     enableDnsHostnames: true
     enableDnsSupport: true
     internetGateway: false
     subnets:
-      - name: VPCe-subnet-1
+      - name: subnet-1
         availabilityZone: a
-        ipv4CidrBlock: 10.252.0.0/26
-      - name: VPCe-subnet-2
+        ipv4CidrBlock: 10.1.0.0/26
+      - name: subnet-2
         availabilityZone: b
-        ipv4CidrBlock: 10.252.0.64/26
+        ipv4CidrBlock: 10.1.0.64/26
     interfaceEndpoints:
       central: false
       defaultPolicy: Default
       subnets:
-        - VPCe-subnet-1
-        - VPCe-subnet-2
+        - subnet-1
+        - subnet-2
       endpoints:
-        - service: ssm
+        - service: ec2
