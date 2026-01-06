@@ -6,14 +6,13 @@ defaultVpc:
 
 vpcs:
   - name: core-shared-endpoint
-    account: NetCore
+    account: Network
     region: us-east-1
     cidrs:
       - 10.251.0.0/24
     enableDnsHostnames: true
     enableDnsSupport: true
     internetGateway: false
-    instanceTenancy: default
     subnets:
       - name: VPCe-subnet-1
         availabilityZone: a
@@ -23,7 +22,6 @@ vpcs:
         ipv4CidrBlock: 10.251.0.64/26
     interfaceEndpoints:
       central: true
-      defaultPolicy: Default
       subnets:
         - VPCe-subnet-1
         - VPCe-subnet-2
@@ -31,14 +29,13 @@ vpcs:
         - service: ssm
 
   - name: public-shared-endpoint
-    account: NetPublic
+    account: Network
     region: us-east-1
     cidrs:
       - 10.252.0.0/24
     enableDnsHostnames: true
     enableDnsSupport: true
     internetGateway: false
-    instanceTenancy: default
     subnets:
       - name: VPCe-subnet-1
         availabilityZone: a
@@ -48,7 +45,6 @@ vpcs:
         ipv4CidrBlock: 10.252.0.64/26
     interfaceEndpoints:
       central: false
-      defaultPolicy: Default
       subnets:
         - VPCe-subnet-1
         - VPCe-subnet-2
