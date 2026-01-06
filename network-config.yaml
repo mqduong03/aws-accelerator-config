@@ -22,7 +22,6 @@ vpcs:
         ipv4CidrBlock: 10.0.0.64/26
     interfaceEndpoints:
       central: true
-      defaultPolicy: Default
       subnets:
         - subnet-1
         - subnet-2
@@ -46,7 +45,6 @@ vpcs:
         ipv4CidrBlock: 10.1.0.64/26
     interfaceEndpoints:
       central: false
-      defaultPolicy: Default
       subnets:
         - subnet-1
         - subnet-2
