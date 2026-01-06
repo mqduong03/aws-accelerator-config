@@ -25,11 +25,6 @@ mandatoryAccounts:
     warm: false
 
 workloadAccounts:
-  - name: Network-Old
-    description: Old Network account - suspended
-    email: mqduong+4@amazon.com
-    organizationalUnit: Root
-    warm: true
   - name: Network
     description: Network account for VPC endpoints
     email: mqduong+5@amazon.com
