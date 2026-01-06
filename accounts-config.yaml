@@ -23,5 +23,14 @@ mandatoryAccounts:
     email: mqduong+2@amazon.com
     organizationalUnit: Security
     warm: false
+  - name: Network
+    description: >-
+      The network (primary) account. Do not change the name field for this
+      mandatory account. Note, the account name key does not need to match the
+      AWS account name.
+    email: mqduong+4@amazon.com
+    organizationalUnit: Infrastructure
+    warm: false
+
     
 workloadAccounts: []
