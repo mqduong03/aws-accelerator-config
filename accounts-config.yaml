@@ -23,11 +23,5 @@ mandatoryAccounts:
     email: mqduong+2@amazon.com
     organizationalUnit: Security
     warm: false
-  - name: Network
-    description: >-
-      The network account.
-    email: mqduong+4@amazon.com
-    organizationalUnit: Infrastructure
-    warm: true
 
 workloadAccounts: []
