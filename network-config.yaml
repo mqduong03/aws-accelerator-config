@@ -1,6 +1,40 @@
-defaultVpc:
-  delete: false
-  excludeAccounts: []
-transitGateways: []
-endpointPolicies: []
-vpcs: []
+vpcs:
+  # First VPC with endpoint
+  - name: Test-VPC-1
+    account: NetworkAccount
+    region: us-east-1
+    cidrs:
+      - 10.100.0.0/24
+    enableDnsHostnames: true
+    enableDnsSupport: true
+    internetGateway: false
+    subnets:
+      - name: Test-Subnet-1A
+        availabilityZone: a
+        ipv4CidrBlock: 10.100.0.0/26
+    interfaceEndpoints:
+      subnets:
+        - Test-Subnet-1A
+      endpoints:
+        - service: ssm
+          # private DNS enabled by default
+
+  # Second VPC with same endpoint - THIS WILL CAUSE CONFLICT
+  - name: Test-VPC-2
+    account: NetworkAccount
+    region: us-east-1
+    cidrs:
+      - 10.101.0.0/24
+    enableDnsHostnames: true
+    enableDnsSupport: true
+    internetGateway: false
+    subnets:
+      - name: Test-Subnet-2A
+        availabilityZone: a
+        ipv4CidrBlock: 10.101.0.0/26
+    interfaceEndpoints:
+      subnets:
+        - Test-Subnet-2A
+      endpoints:
+        - service: ssm
+          # private DNS enabled by default - CONFLICT!
