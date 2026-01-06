@@ -24,4 +24,9 @@ mandatoryAccounts:
     organizationalUnit: Security
     warm: false
 
-workloadAccounts: []
+workloadAccounts:
+  - name: Network
+    description: Network account for VPC endpoints
+    email: mqduong+4@amazon.com
+    organizationalUnit: Infrastructure
+    warm: true
