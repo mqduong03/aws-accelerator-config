@@ -1,4 +1,3 @@
-# DNS conflict test configuration
 transitGateways: []
 endpointPolicies:
   - name: Default
@@ -33,14 +32,6 @@ vpcs:
         - VPCs-subnet-2
       endpoints:
         - service: ec2
-        - service: ec2messages
-        - service: ssm
-        - service: ssmmessages
-        - service: kms
-        - service: logs
-        - service: monitoring
-        - service: sns
-        - service: sqs
 
   - name: public-shared-endpoint
     defaultSecurityGroupRulesDeletion: true
@@ -67,11 +58,3 @@ vpcs:
         - VPCs-subnet-2
       endpoints:
         - service: ec2
-        - service: ec2messages
-        - service: ssm
-        - service: ssmmessages
-        - service: kms
-        - service: logs
-        - service: monitoring
-        - service: sns
-        - service: sqs
