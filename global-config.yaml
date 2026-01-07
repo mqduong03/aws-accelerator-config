@@ -44,4 +44,3 @@ logging:
     lifecycleRules: []
     attachPolicyToIamRoles: []
 tags: []
-iamRoleSsmParameters: []

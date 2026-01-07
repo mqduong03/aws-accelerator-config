@@ -1,4 +1,4 @@
-transitGateways: []
+# DNS conflict test configuration
 endpointPolicies:
   - name: Default
     document: policy-documents/vpc-endpoint-default-policy.json
