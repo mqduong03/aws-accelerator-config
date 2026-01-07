@@ -11,9 +11,8 @@ vpcs:
     defaultSecurityGroupRulesDeletion: true
     account: Management
     region: us-east-1
-    ipamAllocations:
-      - ipamPoolName: shared-endpoint-core-il-central-1
-        netmaskLength: 24
+    cidrs:
+      - 10.0.0.0/24
     internetGateway: false
     enableDnsHostnames: true
     enableDnsSupport: true
@@ -46,9 +45,8 @@ vpcs:
     defaultSecurityGroupRulesDeletion: true
     account: Network
     region: us-east-1
-    ipamAllocations:
-      - ipamPoolName: shared-endpoint-pub-il-central-1
-        netmaskLength: 24
+    cidrs:
+      - 10.1.0.0/24
     internetGateway: false
     enableDnsHostnames: true
     enableDnsSupport: true
