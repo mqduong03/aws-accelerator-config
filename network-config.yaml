@@ -8,49 +8,71 @@ defaultVpc:
 
 vpcs:
   - name: core-shared-endpoint
-    account: Network
+    defaultSecurityGroupRulesDeletion: true
+    account: Management
     region: us-east-1
-    cidrs:
-      - 10.0.0.0/24
+    ipamAllocations:
+      - ipamPoolName: shared-endpoint-core-il-central-1
+        netmaskLength: 24
+    internetGateway: false
     enableDnsHostnames: true
     enableDnsSupport: true
-    internetGateway: false
+    instanceTenancy: default
     subnets:
-      - name: subnet-1
+      - name: VPCs-subnet-1
         availabilityZone: a
         ipv4CidrBlock: 10.0.0.0/26
-      - name: subnet-2
+      - name: VPCs-subnet-2
         availabilityZone: b
         ipv4CidrBlock: 10.0.0.64/26
     interfaceEndpoints:
       central: true
       defaultPolicy: Default
       subnets:
-        - subnet-1
-        - subnet-2
+        - VPCs-subnet-1
+        - VPCs-subnet-2
       endpoints:
         - service: ec2
+        - service: ec2messages
+        - service: ssm
+        - service: ssmmessages
+        - service: kms
+        - service: logs
+        - service: monitoring
+        - service: sns
+        - service: sqs
 
   - name: public-shared-endpoint
+    defaultSecurityGroupRulesDeletion: true
     account: Network
     region: us-east-1
-    cidrs:
-      - 10.1.0.0/24
+    ipamAllocations:
+      - ipamPoolName: shared-endpoint-pub-il-central-1
+        netmaskLength: 24
+    internetGateway: false
     enableDnsHostnames: true
     enableDnsSupport: true
-    internetGateway: false
+    instanceTenancy: default
     subnets:
-      - name: subnet-1
+      - name: VPCs-subnet-1
         availabilityZone: a
         ipv4CidrBlock: 10.1.0.0/26
-      - name: subnet-2
+      - name: VPCs-subnet-2
         availabilityZone: b
         ipv4CidrBlock: 10.1.0.64/26
     interfaceEndpoints:
       central: false
       defaultPolicy: Default
       subnets:
-        - subnet-1
-        - subnet-2
+        - VPCs-subnet-1
+        - VPCs-subnet-2
       endpoints:
         - service: ec2
+        - service: ec2messages
+        - service: ssm
+        - service: ssmmessages
+        - service: kms
+        - service: logs
+        - service: monitoring
+        - service: sns
+        - service: sqs
