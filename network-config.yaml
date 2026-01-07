@@ -46,7 +46,7 @@ vpcs:
     account: Network
     region: us-east-1
     cidrs:
-      - 10.1.0.0/24
+      - 10.2.0.0/24
     internetGateway: false
     enableDnsHostnames: true
     enableDnsSupport: true
@@ -54,10 +54,10 @@ vpcs:
     subnets:
       - name: VPCs-subnet-1
         availabilityZone: a
-        ipv4CidrBlock: 10.1.0.0/26
+        ipv4CidrBlock: 10.2.0.0/26
       - name: VPCs-subnet-2
         availabilityZone: b
-        ipv4CidrBlock: 10.1.0.64/26
+        ipv4CidrBlock: 10.2.0.64/26
     interfaceEndpoints:
       central: false
       defaultPolicy: Default
