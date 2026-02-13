@@ -33,17 +33,11 @@ workloadAccounts:
     email: mqduong+testOUAccount@amazon.com
     organizationalUnit: Test
     warm: false
-  - name: backup
+  - name: Backup
     email: mqduong+6@amazon.com
-    organizationalUnit: Infrastructure
+    organizationalUnit: Security
     warm: false
   - name: BackupAdministrator
     email: mqduong+7@amazon.com
-    organizationalUnit: Infrastructure
+    organizationalUnit: Security
     warm: false
-
-accountIds:
-  - email: mqduong+6@amazon.com
-    accountId: "903938976569"
-  - email: mqduong+7@amazon.com
-    accountId: "742932328648"
