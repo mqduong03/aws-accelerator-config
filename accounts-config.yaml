@@ -35,14 +35,9 @@ workloadAccounts:
     email: mqduong+testOUAccount@amazon.com
     organizationalUnit: Test
     warm: false
-  - name: CentralBackup
-    description: Central backup account
-    email: mqduong+6@amazon.com
-    organizationalUnit: Infrastructure
-    warm: false
-  - name: BackupAdmin
-    description: Backup administrator account
-    email: mqduong+7@amazon.com
-    organizationalUnit: Infrastructure
-    warm: false
 
+accountIds:
+  - email: mqduong+6@amazon.com
+    accountId: "903938976569"
+  - email: mqduong+7@amazon.com
+    accountId: "742932328648"
