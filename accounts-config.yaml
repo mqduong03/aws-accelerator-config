@@ -40,7 +40,7 @@ workloadAccounts:
     email: mqduong+6@amazon.com
     organizationalUnit: Infrastructure
     warm: false
-  - name: Backup administrator
+  - name: BackupAdministrator
     description: Backup administrator account
     email: mqduong+7@amazon.com
     organizationalUnit: Infrastructure
