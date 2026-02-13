@@ -2,7 +2,7 @@ enable: true
 organizationalUnits:
   - name: Security
   - name: Infrastructure
-  = name: Test
+  - name: Test
   - name: Suspended
     ignore: true
 serviceControlPolicies: []
