@@ -27,17 +27,17 @@ mandatoryAccounts:
 workloadAccounts:
   - name: Network
     email: mqduong+5@amazon.com
-    organizationalUnit: Infrastructure
+    organizationalUnit: Sandbox
     warm: false
   - name: mqduongTestOUAccount
     email: mqduong+testOUAccount@amazon.com
-    organizationalUnit: Test
+    organizationalUnit: Sandbox
     warm: false
   - name: Backup
     email: mqduong+6@amazon.com
-    organizationalUnit: Security
+    organizationalUnit: Sandbox
     warm: false
   - name: BackupAdministrator
     email: mqduong+7@amazon.com
-    organizationalUnit: Security
+    organizationalUnit: Sandbox
     warm: false
