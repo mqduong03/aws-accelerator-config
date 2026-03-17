@@ -1,60 +1,6 @@
 transitGateways: []
-endpointPolicies:
-  - name: Default
-    document: policy-documents/vpc-endpoint-default-policy.json
+endpointPolicies: []
 defaultVpc:
   delete: false
   excludeAccounts: []
-
-vpcs:
-  - name: core-shared-endpoint
-    defaultSecurityGroupRulesDeletion: true
-    account: Management
-    region: us-east-1
-    cidrs:
-      - 10.0.0.0/24
-    internetGateway: false
-    enableDnsHostnames: true
-    enableDnsSupport: true
-    instanceTenancy: default
-    subnets:
-      - name: VPCs-subnet-1
-        availabilityZone: a
-        ipv4CidrBlock: 10.0.0.0/26
-      - name: VPCs-subnet-2
-        availabilityZone: b
-        ipv4CidrBlock: 10.0.0.64/26
-    interfaceEndpoints:
-      central: true
-      defaultPolicy: Default
-      subnets:
-        - VPCs-subnet-1
-        - VPCs-subnet-2
-      endpoints:
-        - service: ec2
-
-  - name: public-shared-endpoint
-    defaultSecurityGroupRulesDeletion: true
-    account: Network
-    region: us-east-1
-    cidrs:
-      - 10.2.0.0/24
-    internetGateway: false
-    enableDnsHostnames: true
-    enableDnsSupport: true
-    instanceTenancy: default
-    subnets:
-      - name: VPCs-subnet-1
-        availabilityZone: a
-        ipv4CidrBlock: 10.2.0.0/26
-      - name: VPCs-subnet-2
-        availabilityZone: b
-        ipv4CidrBlock: 10.2.0.64/26
-    interfaceEndpoints:
-      central: false
-      defaultPolicy: Default
-      subnets:
-        - VPCs-subnet-1
-        - VPCs-subnet-2
-      endpoints:
-        - service: ec2
+vpcs: []
