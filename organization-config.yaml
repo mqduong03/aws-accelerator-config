@@ -1,8 +1,8 @@
 enable: true
 organizationalUnits:
   - name: Security
-  - name: Infrastructure
-  - name: Test
+  - name: Sandbox
+    ignore: true
   - name: Suspended
     ignore: true
 serviceControlPolicies: []
