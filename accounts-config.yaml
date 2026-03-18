@@ -24,4 +24,4 @@ mandatoryAccounts:
     organizationalUnit: Security
     warm: false
 
-workloadAccounts:
+workloadAccounts: []
