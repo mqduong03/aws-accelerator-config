@@ -26,7 +26,7 @@ mandatoryAccounts:
 
 workloadAccounts: []
 
-accountIDs:
+accountIds:
   - email: mqduong+infrastructure1@amazon.com
     accountId: 138465773244
   - email: mqduong+infrastructure2@amazon.com
