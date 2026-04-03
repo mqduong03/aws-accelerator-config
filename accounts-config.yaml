@@ -25,3 +25,9 @@ mandatoryAccounts:
     warm: false
 
 workloadAccounts: []
+
+accountIDs:
+  - email: mqduong+infrastructure1@amazon.com
+    accountId: 138465773244
+    
+
