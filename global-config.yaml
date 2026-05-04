@@ -43,4 +43,6 @@ logging:
     excludeAccounts: []
     lifecycleRules: []
     attachPolicyToIamRoles: []
-tags: []
+tags: 
+  - key: auto-delete
+    value: no
