@@ -37,6 +37,9 @@ workloadAccounts:
     description: The Sandbox 1 account.
     email: mqduong+sandbox1@amazon.com
     organizationalUnit: Sandbox
+  - name: Sandbox2
+    description: The Sandbox 2 account.
+    email: mqduong+sandbox2@amazon.com
   - name: AFTManagement
     description: The management account for AFT.
     email: mqduong+aftmanagement@amazon.com
