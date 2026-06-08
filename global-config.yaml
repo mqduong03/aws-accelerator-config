@@ -2,6 +2,7 @@ homeRegion: us-east-1
 useV2Stacks: true
 enabledRegions:
   - us-east-1
+  - us-west-1
 managementAccountAccessRole: AWSControlTowerExecution
 cloudwatchLogRetentionInDays: 365
 cdkOptions:
