@@ -41,6 +41,8 @@ identityCenter:
       deploymentTargets:
         organizationalUnits:
           - Root
+        excludedAccounts:
+          - Management
 
     - name: Group2-AllAccounts
       permissionSetName: TestReadOnly
@@ -50,6 +52,8 @@ identityCenter:
       deploymentTargets:
         organizationalUnits:
           - Root
+        excludedAccounts:
+          - Management
 
     - name: Group3-AllAccounts
       permissionSetName: TestPowerUser
@@ -59,6 +63,8 @@ identityCenter:
       deploymentTargets:
         organizationalUnits:
           - Root
+        excludedAccounts:
+          - Management
 
     - name: Group4-AllAccounts
       permissionSetName: TestBilling
@@ -68,6 +74,8 @@ identityCenter:
       deploymentTargets:
         organizationalUnits:
           - Root
+        excludedAccounts:
+          - Management
 
     - name: Group1-Management
       permissionSetName: TestAdmin
