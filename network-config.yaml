@@ -1,5 +1,5 @@
 defaultVpc:
-  delete: true
+  delete: false
   excludeAccounts: []
 transitGateways: []
 endpointPolicies: []
