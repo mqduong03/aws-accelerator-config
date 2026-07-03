@@ -3,3 +3,104 @@ policySets: []
 roleSets: []
 groupSets: []
 userSets: []
+
+identityCenter:
+  name: aws-sso
+  identityCenterPermissionSets:
+    - name: TestAdmin
+      description: Test admin access
+      sessionDuration: 60
+      policies:
+        awsManaged:
+          - arn:aws:iam::aws:policy/AdministratorAccess
+    - name: TestReadOnly
+      description: Test read-only access
+      sessionDuration: 60
+      policies:
+        awsManaged:
+          - arn:aws:iam::aws:policy/ReadOnlyAccess
+    - name: TestPowerUser
+      description: Test power user access
+      sessionDuration: 60
+      policies:
+        awsManaged:
+          - arn:aws:iam::aws:policy/PowerUserAccess
+    - name: TestBilling
+      description: Test billing access
+      sessionDuration: 60
+      policies:
+        awsManaged:
+          - arn:aws:iam::aws:policy/job-function/Billing
+
+  identityCenterAssignments:
+    - name: Group1-AllAccounts
+      permissionSetName: TestAdmin
+      principals:
+        - type: GROUP
+          name: Test-Group-1
+      deploymentTargets:
+        organizationalUnits:
+          - Root
+
+    - name: Group2-AllAccounts
+      permissionSetName: TestReadOnly
+      principals:
+        - type: GROUP
+          name: Test-Group-2
+      deploymentTargets:
+        organizationalUnits:
+          - Root
+
+    - name: Group3-AllAccounts
+      permissionSetName: TestPowerUser
+      principals:
+        - type: GROUP
+          name: Test-Group-3
+      deploymentTargets:
+        organizationalUnits:
+          - Root
+
+    - name: Group4-AllAccounts
+      permissionSetName: TestBilling
+      principals:
+        - type: GROUP
+          name: Test-Group-4
+      deploymentTargets:
+        organizationalUnits:
+          - Root
+
+    - name: Group1-Management
+      permissionSetName: TestAdmin
+      principals:
+        - type: GROUP
+          name: Test-Group-1
+      deploymentTargets:
+        accounts:
+          - Management
+
+    - name: Group2-Management
+      permissionSetName: TestReadOnly
+      principals:
+        - type: GROUP
+          name: Test-Group-2
+      deploymentTargets:
+        accounts:
+          - Management
+
+    - name: Group3-Management
+      permissionSetName: TestPowerUser
+      principals:
+        - type: GROUP
+          name: Test-Group-3
+      deploymentTargets:
+        accounts:
+          - Management
+
+    - name: Group4-Management
+      permissionSetName: TestBilling
+      principals:
+        - type: GROUP
+          name: Test-Group-4
+      deploymentTargets:
+        accounts:
+          - Management
